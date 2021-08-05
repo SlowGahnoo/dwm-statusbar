@@ -1,0 +1,3 @@
+/HDD/Programming/C++/system/status/CMakeFiles/rebuild_cache.dir
+/HDD/Programming/C++/system/status/CMakeFiles/edit_cache.dir
+/HDD/Programming/C++/system/status/CMakeFiles/status.dir

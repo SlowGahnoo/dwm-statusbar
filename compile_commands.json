@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/HDD/Programming/C++/system/status",
+  "command": "/usr/bin/c++      -pipe  -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Winit-list-lifetime -fno-exceptions -fno-rtti -fno-asynchronous-unwind-tables -fanalyzer -march=native -Os    -o CMakeFiles/status.dir/status.cpp.o -c /HDD/Programming/C++/system/status/status.cpp",
+  "file": "/HDD/Programming/C++/system/status/status.cpp"
+},
+{
+  "directory": "/HDD/Programming/C++/system/status",
+  "command": "/usr/bin/c++      -pipe  -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Wduplicated-cond -Wduplicated-branches -Wlogical-op -Wuseless-cast -Winit-list-lifetime -fno-exceptions -fno-rtti -fno-asynchronous-unwind-tables -fanalyzer -march=native -Os    -o CMakeFiles/status.dir/XKeyboard.cpp.o -c /HDD/Programming/C++/system/status/XKeyboard.cpp",
+  "file": "/HDD/Programming/C++/system/status/XKeyboard.cpp"
+}
+]
