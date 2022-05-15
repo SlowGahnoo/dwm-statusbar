@@ -1,0 +1,8 @@
+
+status
+.cache/clangd/index
+CMakeFiles
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+.ccls-cache

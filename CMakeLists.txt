@@ -21,7 +21,6 @@ add_definitions("
 -Wuseless-cast
 -Winit-list-lifetime
 -fno-asynchronous-unwind-tables
--fanalyzer
 -march=native -Os  
 ") 
 

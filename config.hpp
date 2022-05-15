@@ -1,5 +1,7 @@
 static const char* delim = " ";
 
+#include "module.hpp"
+
 static const auto modules = std::to_array<std::unique_ptr<Module>> ({
 	std::make_unique< Thinklight  >(),
 	std::make_unique< MPD         >(),
@@ -7,5 +9,7 @@ static const auto modules = std::to_array<std::unique_ptr<Module>> ({
 	std::make_unique< Temperature >(),
 	std::make_unique< Battery     >(),
 	std::make_unique< Memory      >(),
-	std::make_unique< DateTime    >()
+	std::make_unique< DateTime    >(),
+	/* std::make_unique< Penguin     >() */
 });
+

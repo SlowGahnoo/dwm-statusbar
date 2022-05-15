@@ -1,1 +1,0 @@
-/sbin/c++ CMakeFiles/status.dir/status.cpp.o -o status  /usr/lib/libX11.so /usr/lib/libmpdclient.so /usr/lib/libfmt.so 

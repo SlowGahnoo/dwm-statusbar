@@ -11,7 +11,6 @@
 
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
-// #include "XKeyboard.h"
 
 #include <linux/wireless.h> // wreq, IW_...
 #include <sys/ioctl.h>      // ioctl
@@ -62,15 +61,8 @@ scroll_str(std::string& s)
 	return str;
 }
 
-class Module {
-private:
-	virtual std::ostream& update(std::ostream& out) = 0;
-public:
-	virtual ~Module() {} ;
-	friend std::ostream& operator << (std::ostream& out, Module& m) {
-		return m.update(out);
-	}
-};
+
+#include "module.hpp"
 
 class WIFI : public Module {
 	const char* IW_INTERFACE = "wlp3s0";
@@ -343,6 +335,16 @@ class MPD : public Module {
 	}
 };
 
+class Penguin : public Module {
+	static constexpr auto penguin = COLOR_FMT(COLOR_NORMAL , " ");
+
+	std::ostream&
+	update(std::ostream& out) {
+		out << penguin;
+		return out;
+	}
+};
+
 
 #include <csignal>
 #include <algorithm>
@@ -380,12 +382,14 @@ void bar_update(const std::stringstream& st)
 
 void run(void)
 {
-	for (;running;std::this_thread::sleep_for(std::chrono::milliseconds(TIME_INTERVAL_MS))) {
+
+	while (running) {
 		std::stringstream status;
-		std::transform(std::begin(modules), std::end(modules),
-					   std::ostream_iterator<Module&>(status, delim),
-					   [](decltype(modules[0]) p) -> Module& {return *p.get();});
+		for (const auto& module : modules) {
+			status << *module << delim;
+		}
 		bar_update(status);
+		std::this_thread::sleep_for(std::chrono::milliseconds(TIME_INTERVAL_MS));
 	}
 }
 
